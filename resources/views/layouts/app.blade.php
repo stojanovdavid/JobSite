@@ -1,3 +1,4 @@
+
 <html>
   <head>
     <link
@@ -14,11 +15,7 @@
       name="viewport"
       content="width=device-width,initial-scale=1,maximum-scale=1"
     />
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-      }
-    </style>
+    <link rel="stylesheet" href="/assets/css/main.css">
     <script
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js"
       defer
@@ -45,4 +42,8 @@
   </nav>
     @yield('content')
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+  <script src="js/scripts.js"></script>
+  <script src="/js/main.js"></script>
 </html>

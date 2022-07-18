@@ -13,9 +13,12 @@ class LoginController extends Controller
     }
 
     public function login(Request $request){
-        if(auth()->attempt(['email' => $request->email,'password' => $request->password])){
-            return redirect()->route('home');
+        if(auth()->attempt(['email' => $request->email,'password' => $request->password, 'role' => "Employer"])){
+            return redirect()->route('employer.dashboard');
+        }else if(auth()->attempt(['email' => $request->email,'password' => $request->password, 'role' => "Job Seeker"])){
+            return redirect()->route('employee.dashboard');
         }else{
+            
             return back()->with('message', 'Invalid creditentials');
         }
         
